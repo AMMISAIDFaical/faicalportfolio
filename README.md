@@ -1,8 +1,3 @@
----
-layout: default
-title: "Home"
----
-
 # 👋 Hi, I'm Faiçal AMMISAID
 
 **AI & Big Data Engineer | Certified Azure & Databricks**  
