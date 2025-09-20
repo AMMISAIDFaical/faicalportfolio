@@ -1,22 +1,18 @@
 title: "Faiçal AMMISAID"
-description: "AI & Big Data Engineer | Certified Azure & Databricks "
-baseurl: "" # leave empty if your repo is <username>.github.io
+description: "AI & Big Data Engineer | Certified Azure & Databricks"
+baseurl: "" 
 url: "https://faical.github.io"
 
-# Theme (pick one from GitHub Pages supported themes)
-theme: jekyll-theme-minimal
+theme: jekyll-theme-cayman
 
-# Author details
 author:
   name: "Faiçal AMMISAID"
   email: "faical.outlook@outlook.com"
 
-# Social links (optional)
 social_links:
-  github: https://github.com/AMMISAIDFaical
-  linkedin: https://www.linkedin.com/in/faical-ammi-said-1009761b9/
+  github: "https://github.com/AMMISAIDFaical"
+  linkedin: "https://www.linkedin.com/in/faical-ammi-said-1009761b9/"
 
-# Markdown & plugins
 markdown: kramdown
 plugins:
   - jekyll-feed
