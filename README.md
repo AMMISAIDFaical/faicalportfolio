@@ -1,58 +1,96 @@
-# 👋 Hi, I'm Faiçal AMMISAID
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Faiçal AMMISAID – Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold">Faiçal AMMISAID</h1>
+      <nav class="space-x-4">
+        <a href="#projects" class="hover:text-blue-600">Projects</a>
+        <a href="#education" class="hover:text-blue-600">Education</a>
+        <a href="#experience" class="hover:text-blue-600">Work</a>
+        <a href="#contact" class="hover:text-blue-600">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-**AI & Big Data Engineer | Certified Azure & Databricks**  
-Specialized in **Generative AI, ML Engineering, and Data Engineering**
+  <!-- Hero -->
+  <section class="text-center py-16 bg-gradient-to-r from-blue-100 to-purple-100">
+    <h2 class="text-3xl font-bold mb-2">👋 Hi, I'm Faiçal</h2>
+    <p class="text-lg">AI & Big Data Engineer | Certified Azure & Databricks</p>
+    <p class="text-gray-600">Specialized in Generative AI, ML Engineering, and Data Engineering</p>
+    <div class="mt-4 space-x-4">
+      <a href="https://github.com/YOUR_USERNAME" class="text-blue-600 underline">GitHub</a>
+      <a href="https://linkedin.com/in/YOUR_PROFILE" class="text-blue-600 underline">LinkedIn</a>
+      <a href="mailto:faical.outlook@outlook.com" class="text-blue-600 underline">Email</a>
+    </div>
+  </section>
 
-[GitHub](https://github.com/AMMISAIDFaical) · [LinkedIn](https://www.linkedin.com/in/faical-ammi-said-1009761b9/) · [Email](mailto:faical.outlook@outlook.com)
+  <!-- Projects -->
+  <section id="projects" class="max-w-4xl mx-auto px-6 py-12">
+    <h2 class="text-2xl font-bold mb-6">🚀 Projects</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="p-4 bg-white rounded-xl shadow">
+        <h3 class="font-semibold">Smart Driving School – IaC Provisioning</h3>
+        <p class="text-sm text-gray-600">Terraform · Azure · IaC best practices</p>
+      </div>
+      <div class="p-4 bg-white rounded-xl shadow">
+        <h3 class="font-semibold">Smart Driving School – Chatbot</h3>
+        <p class="text-sm text-gray-600">Multi-agent chatbot · LangGraph · Azure AI</p>
+      </div>
+      <div class="p-4 bg-white rounded-xl shadow">
+        <h3 class="font-semibold">Image Segmentation with SAM</h3>
+        <p class="text-sm text-gray-600">Meta SAM · FastAPI · Computer Vision</p>
+      </div>
+      <div class="p-4 bg-white rounded-xl shadow">
+        <h3 class="font-semibold">Churn Prediction Study</h3>
+        <p class="text-sm text-gray-600">EDA · MLflow · Customer data analysis</p>
+      </div>
+      <div class="p-4 bg-white rounded-xl shadow">
+        <h3 class="font-semibold">Paris Airbnb Study</h3>
+        <p class="text-sm text-gray-600">NLP · Recommender system · EDA</p>
+      </div>
+      <div class="p-4 bg-white rounded-xl shadow">
+        <h3 class="font-semibold">OCR-based Text Extraction</h3>
+        <p class="text-sm text-gray-600">OCR · Computer Vision · Geospatial data</p>
+      </div>
+    </div>
+  </section>
 
----
+  <!-- Education -->
+  <section id="education" class="max-w-4xl mx-auto px-6 py-12">
+    <h2 class="text-2xl font-bold mb-6">🎓 Education</h2>
+    <ul class="space-y-3">
+      <li><strong>MSc Big Data & AI</strong> – ESTIA, France (2023–2025)</li>
+      <li><strong>Master in Data Engineering</strong> – Université de Sétif, Algeria (2022–2023)</li>
+    </ul>
+  </section>
 
-## 🚀 Projects
+  <!-- Work Experience -->
+  <section id="experience" class="max-w-4xl mx-auto px-6 py-12">
+    <h2 class="text-2xl font-bold mb-6">💼 Work History</h2>
+    <ul class="space-y-3">
+      <li><strong>Data Scientist / Software Engineer</strong> – REXEL, Paris (Sep 2024 – Mar 2025)</li>
+      <li><strong>ML Engineer</strong> – HUPI & ESTIA, Bidart (Oct 2023 – Jan 2024)</li>
+    </ul>
+  </section>
 
-### [Smart Driving School – IaC Provisioning](https://github.com/AMMISAIDFaical/smart-driving-school-terraform)
-- Automated Azure infrastructure with Terraform  
-- Provisioned AI-based training systems  
-- Applied Infrastructure as Code best practices  
+  <!-- Contact -->
+  <section id="contact" class="text-center py-12 bg-gray-100">
+    <h2 class="text-2xl font-bold mb-4">📫 Contact</h2>
+    <p>📍 Paris, France</p>
+    <p>✉️ <a href="mailto:faical.outlook@outlook.com" class="underline text-blue-600">faical.outlook@outlook.com</a></p>
+  </section>
 
-### [Smart Driving School – Chatbot](https://github.com/AMMISAIDFaical/smart-driving-school)
-- Multi-agent AI chatbot for driving school training  
-- Built with **LangGraph** & **Azure AI Services**  
-- Enabled interactive learning experience  
-
-### [Image Segmentation with SAM](https://github.com/AMMISAIDFaical/mlops_sam_task)
-- Segmentation using **Meta’s SAM model**  
-- Served predictions via **FastAPI backend**  
-- Scalable computer vision pipelines  
-
-### [Churn Prediction Study](https://github.com/AMMISAIDFaical/ML-engineer_chrun)
-- EDA & feature engineering on customer data  
-- ML models trained with **MLflow tracking**  
-- Reproducible experiments & results  
-
-### [Paris Airbnb Study](https://github.com/AMMISAIDFaical/Paris_Airbnb_Study)
-- Content-based Airbnb recommender system  
-- EDA & NLP on Paris review data  
-- Reproducible pipelines & models  
-
-### [OCR-based Text Extraction](https://github.com/AMMISAIDFaical/OCR-based_Image_Text_Extraction_and_Location_Identification)
-- Extracted text & locations from satellite images via OCR  
-- Structured JSON outputs with bounding boxes & confidence  
-- Computer vision + geospatial context  
-
----
-
-## 🎓 Education
-- **MSc Big Data & AI** – ESTIA, France (2023 – 2025)  
-- **Master in Data Engineering** – Université de Sétif, Algeria (2022 – 2023)  
-
----
-
-## 💼 Work History
-- **Data Scientist / Software Engineer** – REXEL, Paris (Sep 2024 – Mar 2025)  
-- **ML Engineer** – HUPI & ESTIA, Bidart (Oct 2023 – Jan 2024)  
-
----
-
-## 📫 Contact
-- 📍 Paris, France  
-- ✉️ [faical.outlook@outlook.com](mailto:faical.outlook@outlook.com)
+  <!-- Footer -->
+  <footer class="text-center py-4 text-gray-500 text-sm">
+    © 2025 Faiçal AMMISAID – Built with GitHub Pages
+  </footer>
+</body>
+</html>
