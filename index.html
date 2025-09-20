@@ -2,10 +2,13 @@
 <html lang="en" class="dark">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Faiçal AMMISAID – Portfolio</title>
 
-  <!-- Prevent flicker -->
+  <!-- Performance: preconnect to Tailwind CDN -->
+  <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin />
+
+  <!-- Prevent flicker: force dark before styles load -->
   <script>
     document.documentElement.classList.add("dark");
   </script>
@@ -18,6 +21,9 @@
       @apply inline-block bg-blue-100 text-blue-800 
         dark:bg-blue-800 dark:text-blue-100 
         text-xs font-semibold mr-2 px-2 py-1 rounded-full;
+    }
+    .cert-logo {
+      @apply w-12 h-12 mr-4 object-contain bg-white rounded p-1;
     }
   </style>
 </head>
@@ -45,8 +51,8 @@
       Specialized in Generative AI, ML Engineering, and Data Engineering
     </p>
     <div class="mt-6 space-x-6">
-      <a href="https://github.com/AMMISAIDFaical" class="text-blue-400 underline">GitHub</a>
-      <a href="https://www.linkedin.com/in/faical-ammi-said-1009761b9/" class="text-blue-400 underline">LinkedIn</a>
+      <a href="https://github.com/AMMISAIDFaical" target="_blank" rel="noopener" class="text-blue-400 underline">GitHub</a>
+      <a href="https://www.linkedin.com/in/faical-ammi-said-1009761b9/" target="_blank" rel="noopener" class="text-blue-400 underline">LinkedIn</a>
       <a href="mailto:faical.outlook@outlook.com" class="text-blue-400 underline">Email</a>
     </div>
   </section>
@@ -57,11 +63,11 @@
     <div class="grid md:grid-cols-2 gap-8">
       <!-- Microsoft -->
       <a href="https://learn.microsoft.com/en-us/users/faicalammisaid-5445/credentials/a2e27177903272d1?ref=https%3A%2F%2Fwww.linkedin.com%2F" 
-         target="_blank" 
+         target="_blank" rel="noopener"
          class="flex items-center p-4 bg-gray-800 rounded-xl shadow hover:shadow-lg hover:scale-105 transition transform">
         <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" 
              alt="Microsoft" 
-             class="w-12 h-12 mr-4 object-contain bg-white rounded p-1" />
+             class="cert-logo" loading="lazy" decoding="async" />
         <div>
           <h3 class="font-semibold text-lg text-white">Microsoft Azure AI Engineer Associate</h3>
           <p class="text-sm text-gray-300">Issued by Microsoft, 2024</p>
@@ -70,11 +76,11 @@
 
       <!-- Databricks -->
       <a href="https://credentials.databricks.com/904f7157-96e5-4c30-b44a-f3e4421523c6#acc.YfSczBpE" 
-         target="_blank" 
+         target="_blank" rel="noopener"
          class="flex items-center p-4 bg-gray-800 rounded-xl shadow hover:shadow-lg hover:scale-105 transition transform">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Databricks-c40eaf44.png" 
+        <img src="https://raw.githubusercontent.com/AMMISAIDFaical/faicalportfolio/main/databricksdataeng.png" 
              alt="Databricks" 
-             class="w-12 h-12 mr-4 object-contain bg-white rounded p-1" />
+             class="cert-logo" loading="lazy" decoding="async" />
         <div>
           <h3 class="font-semibold text-lg text-white">Databricks Certified Data Engineer</h3>
           <p class="text-sm text-gray-300">Issued by Databricks, 2024</p>
@@ -88,7 +94,7 @@
     <h2 class="text-3xl font-bold mb-8 text-center">🚀 Projects</h2>
     <div class="grid md:grid-cols-2 gap-8">
       <!-- Example Project -->
-      <a href="https://github.com/AMMISAIDFaical/GENAI-and-ETL-On-DPE" target="_blank" 
+      <a href="https://github.com/AMMISAIDFaical/GENAI-and-ETL-On-DPE" target="_blank" rel="noopener"
          class="w-full p-6 bg-gray-800 rounded-xl shadow hover:shadow-lg hover:scale-105 transition transform flex flex-col">
         <h3 class="font-semibold text-lg mb-1 text-white">GENAI and ETL on DPE</h3>
         <p class="text-sm text-gray-300 mb-2">GenAI study on DPE database of non-residential buildings</p>
@@ -99,7 +105,7 @@
         </div>
       </a>
 
-      <!-- (other projects go here, unchanged) -->
+      <!-- (repeat other projects unchanged) -->
     </div>
   </section>
 
