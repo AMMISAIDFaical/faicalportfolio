@@ -1,7 +1,12 @@
-# Faiçal AMMISAID
+---
+layout: default
+title: "Home"
+---
 
-AI & Big Data Engineer | Certified Azure & Databricks  
-Specialized in **Generative AI, ML Engineering, and Data Engineering**  
+# 👋 Hi, I'm Faiçal AMMISAID
+
+**AI & Big Data Engineer | Certified Azure & Databricks**  
+Specialized in **Generative AI, ML Engineering, and Data Engineering**
 
 [GitHub](https://github.com/AMMISAIDFaical) · [LinkedIn](https://www.linkedin.com/in/faical-ammi-said-1009761b9/) · [Email](mailto:faical.outlook@outlook.com)
 
@@ -10,34 +15,34 @@ Specialized in **Generative AI, ML Engineering, and Data Engineering**
 ## 🚀 Projects
 
 ### [Smart Driving School – IaC Provisioning](https://github.com/AMMISAIDFaical/smart-driving-school-terraform)
-- Automated Azure infrastructure deployment with Terraform  
-- Provisioned cloud services for AI-based training systems  
+- Automated Azure infrastructure with Terraform  
+- Provisioned AI-based training systems  
 - Applied Infrastructure as Code best practices  
 
 ### [Smart Driving School – Chatbot](https://github.com/AMMISAIDFaical/smart-driving-school)
-- Multi-agent chatbot for driving school training  
-- Built with **LangGraph** and **Azure AI Services**  
-- Enabled interactive learning experience with Generative AI  
+- Multi-agent AI chatbot for driving school training  
+- Built with **LangGraph** & **Azure AI Services**  
+- Enabled interactive learning experience  
 
 ### [Image Segmentation with SAM](https://github.com/AMMISAIDFaical/mlops_sam_task)
-- Implemented segmentation using **Meta’s SAM model**  
+- Segmentation using **Meta’s SAM model**  
 - Served predictions via **FastAPI backend**  
-- Designed for scalable computer vision pipelines  
+- Scalable computer vision pipelines  
 
 ### [Churn Prediction Study](https://github.com/AMMISAIDFaical/ML-engineer_chrun)
-- Performed EDA and feature engineering on customer data  
-- Trained ML models to predict churn with MLflow tracking  
-- Delivered reproducible experiments and results
-  
+- EDA & feature engineering on customer data  
+- ML models trained with **MLflow tracking**  
+- Reproducible experiments & results  
+
 ### [Paris Airbnb Study](https://github.com/AMMISAIDFaical/Paris_Airbnb_Study)
-- Built a content-based Airbnb recommender system  
-- Applied EDA & NLP on Paris review data  
-- Delivered reproducible pipelines & models
+- Content-based Airbnb recommender system  
+- EDA & NLP on Paris review data  
+- Reproducible pipelines & models  
 
 ### [OCR-based Text Extraction](https://github.com/AMMISAIDFaical/OCR-based_Image_Text_Extraction_and_Location_Identification)
-- Extracted text and locations from satellite images via OCR  
-- Produced structured JSON outputs with bounding boxes & scores  
-- Combined computer vision with geospatial context
+- Extracted text & locations from satellite images via OCR  
+- Structured JSON outputs with bounding boxes & confidence  
+- Computer vision + geospatial context  
 
 ---
 
