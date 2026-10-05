@@ -1,398 +1,546 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Faiçal AMMISAID – Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Faiçal Ammi Said, développeur Python freelance (IA, backend, data)</title>
+  <meta name="description" content="Développeur Python freelance en Île-de-France. Assistants et agents IA, développement backend, ingénierie des données, formation.">
+  <meta property="og:title" content="Faiçal Ammi Said, développeur Python freelance (IA, backend, data)">
+  <meta property="og:description" content="Assistants et agents IA, développement backend, ingénierie des données, formation.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ammisaidfaical.github.io/faicalportfolio/">
+  <link rel="canonical" href="https://ammisaidfaical.github.io/faicalportfolio/">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230F2233'/%3E%3Ctext x='32' y='43' font-family='Arial,sans-serif' font-size='28' font-weight='700' text-anchor='middle' fill='%23E3BC45'%3EFA%3C/text%3E%3C/svg%3E">
+  <script>
+    /* Apply the saved or system theme before the page paints, to avoid a flash. */
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem('theme'); } catch (e) {}
+      if (t !== 'light' && t !== 'dark') {
+        t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Faiçal Ammi Said",
+    "jobTitle": "Développeur Python freelance (IA, backend, data)",
+    "url": "https://ammisaidfaical.github.io/faicalportfolio/",
+    "email": "mailto:faicalammisaid.consulting@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "L'Haÿ-les-Roses", "addressCountry": "FR" },
+    "sameAs": [
+      "https://www.malt.fr/profile/faicalammisaid1",
+      "https://www.linkedin.com/in/faical-ammisaid-1009761b9/",
+      "https://github.com/AMMISAIDFaical"
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
-    
-    * {
-      font-family: 'Inter', sans-serif;
+    :root {
+      --bg: #ECF1F4;
+      --surface: #FFFFFF;
+      --ink: #0F2233;
+      --muted: #55677A;
+      --line: #C9D4DC;
+      --bronze: #A5673A;
+      --silver: #5A6B7D;
+      --gold: #B98D12;
+      --bronze-wash: #F6ECE4;
+      --silver-wash: #EEF2F5;
+      --gold-wash: #FBF4DC;
+      --display: "Bricolage Grotesque", "Segoe UI", sans-serif;
+      --body: "IBM Plex Sans", "Segoe UI", sans-serif;
+          }
+    :root { color-scheme: light; }
+    :root[data-theme="dark"] {
+      color-scheme: dark;
+      --bg: #0C1B29;
+      --surface: #132739;
+      --ink: #E8EFF4;
+      --muted: #9DB0C0;
+      --line: #2A4257;
+      --bronze: #D69A6C;
+      --silver: #A9B8C6;
+      --gold: #E3BC45;
+      --bronze-wash: #24211F;
+      --silver-wash: #182C3E;
+      --gold-wash: #2A2715;
     }
-    
+    /* Same dark values when JavaScript is off and the system is in dark mode. */
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme]) {
+        color-scheme: dark;
+        --bg: #0C1B29; --surface: #132739; --ink: #E8EFF4; --muted: #9DB0C0; --line: #2A4257;
+        --bronze: #D69A6C; --silver: #A9B8C6; --gold: #E3BC45;
+        --bronze-wash: #24211F; --silver-wash: #182C3E; --gold-wash: #2A2715;
+      }
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    .skip {
+      position: absolute; left: 16px; top: -60px; z-index: 20;
+      background: var(--ink); color: var(--bg); padding: 10px 16px;
+      border-radius: 8px; font-weight: 600; text-decoration: none;
+    }
+    .skip:focus { top: 12px; }
     body {
-      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%);
-      overflow-x: hidden;
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--body);
+      font-size: 1.0625rem;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      transition: background-color 0.2s ease, color 0.2s ease;
     }
-    
-    .gradient-text {
-      background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #ec4899 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+    a { color: inherit; }
+    a:focus-visible, button:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 3px;
+      border-radius: 4px;
     }
-    
-    .glass-card {
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      transition: all 0.3s ease;
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+    /* Header */
+    .top {
+      position: sticky; top: 0; z-index: 10; background: var(--bg);
+      display: flex; align-items: center; flex-wrap: wrap;
+      gap: 10px 24px; padding: 16px 0; border-bottom: 1px solid transparent;
     }
-    
-    .glass-card:hover {
-      background: rgba(255, 255, 255, 0.08);
-      border-color: rgba(96, 165, 250, 0.3);
-      transform: translateY(-8px);
-      box-shadow: 0 20px 40px rgba(96, 165, 250, 0.2);
+    .top.scrolled { border-bottom-color: var(--line); }
+    .brand {
+      font-family: var(--display); font-weight: 800; font-size: 1.15rem;
+      text-decoration: none; letter-spacing: -0.01em; margin-right: auto;
     }
-    
-    .tech-badge {
-      background: linear-gradient(135deg, rgba(96, 165, 250, 0.2), rgba(167, 139, 250, 0.2));
-      border: 1px solid rgba(96, 165, 250, 0.3);
-      backdrop-filter: blur(5px);
-      padding: 6px 14px;
-      border-radius: 20px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: #bfdbfe;
-      display: inline-block;
-      margin: 4px;
-      transition: all 0.2s ease;
+    .top nav { display: flex; align-items: center; gap: 4px; }
+    .top nav a {
+      text-decoration: none; color: var(--muted); font-size: 0.95rem;
+      padding: 10px 12px; border-radius: 8px; white-space: nowrap;
     }
-    
-    .tech-badge:hover {
-      background: linear-gradient(135deg, rgba(96, 165, 250, 0.3), rgba(167, 139, 250, 0.3));
-      border-color: rgba(96, 165, 250, 0.5);
-      transform: scale(1.05);
+    .top nav a:hover, .top nav a[aria-current="true"] { color: var(--ink); }
+    .top nav a[aria-current="true"] { font-weight: 600; }
+    .controls { display: flex; gap: 8px; }
+    .pill {
+      font: 600 0.85rem var(--body); color: var(--ink); cursor: pointer;
+      background: transparent; border: 1.5px solid var(--ink);
+      border-radius: 999px; padding: 0 14px; min-height: 40px; min-width: 44px;
     }
-    
-    .floating {
-      animation: float 6s ease-in-out infinite;
+    .pill:hover { background: var(--ink); color: var(--bg); }
+
+    /* Hero */
+    .hero {
+      display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+      gap: 56px; align-items: center; padding: 56px 0 96px;
     }
-    
-    @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-20px); }
+    .hero h1 {
+      font-family: var(--display); font-weight: 800;
+      font-size: clamp(2.5rem, 5.4vw, 4.5rem);
+      line-height: 1.02; letter-spacing: -0.035em; margin: 0 0 24px;
+      text-wrap: balance;
     }
-    
-    .glow {
-      box-shadow: 0 0 60px rgba(96, 165, 250, 0.4);
-      animation: glow 3s ease-in-out infinite;
+    .hero p.lead { font-size: 1.2rem; color: var(--muted); max-width: 34em; margin: 0 0 32px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 14px; }
+    .btn {
+      display: inline-block; text-decoration: none; font-weight: 600;
+      padding: 13px 24px; border-radius: 10px; border: 1.5px solid var(--ink);
     }
-    
-    @keyframes glow {
-      0%, 100% { box-shadow: 0 0 60px rgba(96, 165, 250, 0.4); }
-      50% { box-shadow: 0 0 80px rgba(167, 139, 250, 0.6); }
+    .btn.primary { background: var(--ink); color: var(--bg); }
+    .btn.primary:hover { opacity: 0.88; }
+    .btn.ghost:hover { background: var(--ink); color: var(--bg); }
+
+    /* Pipeline: the signature element */
+    .pipeline { position: relative; padding-left: 30px; }
+    .pipeline::before {
+      content: ""; position: absolute; left: 8px; top: 14px; bottom: 14px;
+      width: 2px; background: linear-gradient(var(--bronze), var(--silver), var(--gold));
     }
-    
-    .nav-link {
-      position: relative;
-      transition: color 0.3s ease;
+    .stage {
+      position: relative; border-radius: 14px; padding: 18px 20px;
+      margin-bottom: 18px; border: 1px solid var(--line);
     }
-    
-    .nav-link::after {
-      content: '';
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: linear-gradient(90deg, #60a5fa, #a78bfa);
-      transition: width 0.3s ease;
+    .stage:last-child { margin-bottom: 0; }
+    .stage::before {
+      content: ""; position: absolute; left: -29px; top: 22px;
+      width: 16px; height: 16px; border-radius: 50%;
+      background: var(--dot); border: 3px solid var(--bg);
     }
-    
-    .nav-link:hover::after {
-      width: 100%;
+    .pipeline { list-style: none; margin: 0; }
+    .stage h2 { font: 600 1rem var(--body); margin: 0 0 6px; color: var(--dot); }
+    .stage p { margin: 0; font-size: 0.98rem; }
+    .bronze { --dot: var(--bronze); background: var(--bronze-wash); }
+    .silver { --dot: var(--silver); background: var(--silver-wash); }
+    .gold   { --dot: var(--gold);   background: var(--gold-wash); }
+    .files { list-style: none; margin: 12px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+    .files li {
+      font-size: 0.82rem; color: var(--muted); background: var(--bg);
+      border: 1px solid var(--line); border-radius: 999px; padding: 3px 11px;
     }
-    
-    .cert-logo {
-      width: 48px;
-      height: 48px;
-      object-fit: contain;
-      transition: transform 0.3s ease;
+    .stage p.result {
+      font-family: var(--display); font-weight: 600; font-size: 1.25rem;
+      line-height: 1.28; letter-spacing: -0.015em;
     }
-    
-    .glass-card:hover .cert-logo {
-      transform: scale(1.1) rotate(5deg);
+
+    @media (prefers-reduced-motion: no-preference) {
+      .stage { opacity: 0; transform: translateY(10px); animation: land 0.6s ease forwards; }
+      .silver { animation-delay: 0.55s; }
+      .gold { animation-delay: 1.1s; }
+      .pipeline::before { transform-origin: top; transform: scaleY(0); animation: grow 1.5s ease forwards; }
+      @keyframes land { to { opacity: 1; transform: none; } }
+      @keyframes grow { to { transform: scaleY(1); } }
     }
-    
-    .hero-bg {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      z-index: 0;
+
+    /* Sections */
+    section.block { padding: 72px 0; border-top: 1px solid var(--line); }
+    .block-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 40px; }
+    .block h2.title {
+      font-family: var(--display); font-weight: 800;
+      font-size: clamp(1.8rem, 3vw, 2.5rem); line-height: 1.08;
+      letter-spacing: -0.025em; margin: 0;
     }
-    
-    .orb {
-      position: absolute;
-      border-radius: 50%;
-      filter: blur(60px);
-      opacity: 0.3;
-      animation: orb-float 20s ease-in-out infinite;
+    .block .intro { color: var(--muted); margin: 12px 0 0; max-width: 22em; }
+
+    .rows { list-style: none; margin: 0; padding: 0; }
+    .rows > li { padding: 22px 0; border-top: 1px solid var(--line); }
+    .rows > li:first-child { border-top: 0; padding-top: 0; }
+    .rows h3 {
+      font-family: var(--display); font-weight: 600; font-size: 1.3rem;
+      letter-spacing: -0.015em; margin: 0 0 6px;
     }
-    
-    .orb-1 {
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(circle, #60a5fa, transparent);
-      top: -100px;
-      left: -100px;
+    .rows p { margin: 0; color: var(--muted); max-width: 40em; }
+    .tools { margin-top: 10px !important; font-size: 0.92rem; color: var(--ink) !important; }
+
+    .cert { display: flex; justify-content: space-between; align-items: baseline; gap: 20px; flex-wrap: wrap; }
+    .cert .who { color: var(--muted); font-size: 0.95rem; }
+    .verify {
+      font-weight: 600; font-size: 0.95rem; white-space: nowrap;
+      text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 4px;
     }
-    
-    .orb-2 {
-      width: 350px;
-      height: 350px;
-      background: radial-gradient(circle, #a78bfa, transparent);
-      bottom: -100px;
-      right: -100px;
-      animation-delay: -10s;
+    .verify:hover { color: var(--gold); }
+
+    .project a.name { text-decoration: none; }
+    .project a.name:hover h3 { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 5px; }
+
+    /* Contact */
+    .contact { padding: 96px 0; border-top: 1px solid var(--line); }
+    .contact h2 {
+      font-family: var(--display); font-weight: 800;
+      font-size: clamp(2rem, 4.4vw, 3.5rem); line-height: 1.05;
+      letter-spacing: -0.03em; margin: 0 0 20px; max-width: 16em; text-wrap: balance;
     }
-    
-    .orb-3 {
-      width: 300px;
-      height: 300px;
-      background: radial-gradient(circle, #ec4899, transparent);
-      top: 50%;
-      left: 50%;
-      animation-delay: -5s;
+    .contact p { color: var(--muted); max-width: 36em; margin: 0 0 30px; }
+    .mail {
+      font-family: var(--display); font-weight: 600;
+      font-size: clamp(1.15rem, 2.6vw, 1.9rem); letter-spacing: -0.01em;
+      text-decoration: underline; text-decoration-color: var(--gold);
+      text-decoration-thickness: 3px; text-underline-offset: 7px;
+      word-break: break-word;
     }
-    
-    @keyframes orb-float {
-      0%, 100% { transform: translate(0, 0) scale(1); }
-      33% { transform: translate(30px, -30px) scale(1.1); }
-      66% { transform: translate(-30px, 30px) scale(0.9); }
-    }
-    
-    .fade-in {
-      animation: fadeIn 0.8s ease-in;
-    }
-    
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+    .mail:hover { color: var(--gold); }
+    .elsewhere { margin-top: 30px; display: flex; gap: 24px; flex-wrap: wrap; }
+    .elsewhere a { font-weight: 600; padding: 8px 0; }
+    .about p { margin: 0 0 16px; max-width: 40em; }
+    .about p:last-child { margin-bottom: 0; }
+
+    footer { border-top: 1px solid var(--line); padding: 26px 0 40px; color: var(--muted); font-size: 0.88rem; }
+    footer p { margin: 0 0 4px; }
+
+    @media (max-width: 860px) {
+      .hero { grid-template-columns: 1fr; gap: 44px; padding: 28px 0 64px; }
+      .block-head { grid-template-columns: 1fr; gap: 28px; }
+      .top nav { order: 3; width: calc(100% + 10px); margin: 0 -5px; overflow-x: auto; scrollbar-width: none; }
+      .top nav { justify-content: space-between; }
+      .top nav a { padding: 10px 5px; font-size: 0.84rem; }
+      html { scroll-padding-top: 124px; }
+      section.block { padding: 52px 0; }
+      .contact { padding: 64px 0; }
     }
   </style>
 </head>
-<body class="text-gray-100">
+<body>
+  <a class="skip" href="#top" data-en="Skip to content">Aller au contenu</a>
+  <div class="wrap">
 
-  <!-- Navigation -->
-  <header class="fixed top-0 w-full z-50 backdrop-blur-md bg-slate-900/50 border-b border-white/10">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold gradient-text">FA</h1>
-      <nav class="space-x-8 flex items-center">
-        <a href="#certifications" class="nav-link text-gray-300 hover:text-white">Certifications</a>
-        <a href="#projects" class="nav-link text-gray-300 hover:text-white">Projects</a>
-        <a href="#contact" class="nav-link text-gray-300 hover:text-white">Contact</a>
+    <header class="top" id="header">
+      <a class="brand" href="#top">Faiçal Ammi Said</a>
+      <nav aria-label="Navigation principale" id="nav">
+        <a href="#services" data-en="Services">Services</a>
+        <a href="#certifications" data-en="Certifications">Certifications</a>
+        <a href="#projets" data-en="Projects">Projets</a>
+        <a href="#a-propos" data-en="About">À propos</a>
+        <a href="#contact" data-en="Contact">Contact</a>
       </nav>
-    </div>
-  </header>
+      <div class="controls">
+        <button class="pill" id="theme" type="button">Sombre</button>
+        <button class="pill" id="lang" type="button" aria-label="Switch to English">EN</button>
+      </div>
+    </header>
 
-  <!-- Hero Section -->
-  <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
-    <div class="hero-bg">
-      <div class="orb orb-1"></div>
-      <div class="orb orb-2"></div>
-      <div class="orb orb-3"></div>
-    </div>
-    
-    <div class="relative z-10 text-center px-6 fade-in">
-      <div class="floating mb-8">
-        <div class="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-blue-400 via-purple-400 to-pink-400 p-1 glow">
-          <div class="w-full h-full rounded-full bg-slate-900 flex items-center justify-center">
-            <span class="text-5xl font-bold gradient-text">FA</span>
+    <main id="top" tabindex="-1">
+      <div class="hero">
+        <div>
+          <h1 data-en="I solve your AI, backend and data problems with Python.">Je résous vos problèmes d'IA, de backend et de données avec Python.</h1>
+          <p class="lead" data-en="Freelance Python developer based near Paris. I build AI assistants, develop the server side of your applications and make the data they rely on dependable.">Développeur Python freelance en Île-de-France. Je conçois des assistants IA, je développe la partie serveur de vos applications et je fiabilise les données dont elles ont besoin.</p>
+          <div class="actions">
+            <a class="btn primary" href="#contact" data-en="Discuss a project">Parler d'une mission</a>
+            <a class="btn ghost" target="_blank" rel="noopener" href="https://www.malt.fr/profile/faicalammisaid1" data-en="Hire me on Malt">Me recruter sur Malt</a>
           </div>
         </div>
-      </div>
-      
-      <h1 class="text-6xl md:text-7xl font-extrabold mb-6 gradient-text">
-        Faiçal AMMISAID
-      </h1>
-      
-      <p class="text-2xl md:text-3xl text-gray-300 mb-4 font-light">
-        AI & Big Data Engineer
-      </p>
-      
-      <p class="text-lg text-gray-400 max-w-2xl mx-auto mb-8">
-        Crafting intelligent solutions with Generative AI, ML Engineering, and Data Engineering
-      </p>
-      
-      <div class="flex justify-center gap-4 mb-12">
-        <span class="tech-badge">Azure AI Certified</span>
-        <span class="tech-badge">Databricks Certified</span>
-        <span class="tech-badge">Fabric Certified</span>
-      </div>
-      
-      <div class="flex justify-center gap-6">
-        <a href="https://github.com/AMMISAIDFaical" target="_blank" class="px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full font-semibold hover:shadow-lg hover:shadow-blue-500/50 transition-all transform hover:scale-105">
-          GitHub
-        </a>
-        <a href="https://www.linkedin.com/in/faical-ammisaid-1009761b9/" target="_blank" class="px-8 py-3 glass-card rounded-full font-semibold hover:shadow-lg transition-all transform hover:scale-105">
-          LinkedIn
-        </a>
-        <a href="mailto:faical.outlook@outlook.com" class="px-8 py-3 glass-card rounded-full font-semibold hover:shadow-lg transition-all transform hover:scale-105">
-          Email
-        </a>
-      </div>
-    </div>
-  </section>
 
-  <!-- Certifications -->
-  <section id="certifications" class="relative py-24 px-6">
-    <div class="max-w-5xl mx-auto">
-      <h2 class="text-5xl font-bold mb-4 text-center gradient-text">Certifications</h2>
-      <p class="text-gray-400 text-center mb-16">Industry-recognized credentials in cloud and data engineering</p>
-      
-      <div class="grid md:grid-cols-3 gap-8">
-        <a href="https://learn.microsoft.com/en-us/users/faicalammisaid-5445/credentials/a2e27177903272d1?ref=https%3A%2F%2Fwww.linkedin.com%2F" target="_blank" class="glass-card rounded-2xl p-8 flex flex-col items-center text-center">
-          <div class="mb-6 p-4 rounded-xl bg-gradient-to-br from-blue-500/20 to-purple-500/20">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft" class="cert-logo">
-          </div>
-          <h3 class="text-xl font-bold text-white mb-2">Azure AI Engineer</h3>
-          <p class="text-sm text-gray-400 mb-4">Associate Level</p>
-          <p class="text-xs text-blue-400">Microsoft • 2025</p>
-        </a>
-        
-        <a href="https://credentials.databricks.com/904f7157-96e5-4c30-b44a-f3e4421523c6#acc.YfSczBpE" target="_blank" class="glass-card rounded-2xl p-8 flex flex-col items-center text-center">
-          <div class="mb-6 p-4 rounded-xl bg-gradient-to-br from-orange-500/20 to-red-500/20">
-            <img src="https://raw.githubusercontent.com/AMMISAIDFaical/faicalportfolio/main/databricksdataeng.png" alt="Databricks" class="cert-logo">
-          </div>
-          <h3 class="text-xl font-bold text-white mb-2">Data Engineer</h3>
-          <p class="text-sm text-gray-400 mb-4">Professional Level</p>
-          <p class="text-xs text-blue-400">Databricks • 2025</p>
-        </a>
-        
-        <a href="https://learn.microsoft.com/en-us/users/faicalammisaid-5445/credentials/ddff47c060329d67?ref=https%3A%2F%2Fwww.linkedin.com%2F" target="_blank" class="glass-card rounded-2xl p-8 flex flex-col items-center text-center">
-          <div class="mb-6 p-4 rounded-xl bg-gradient-to-br from-purple-500/20 to-pink-500/20">
-            <img src="https://raw.githubusercontent.com/AMMISAIDFaical/faicalportfolio/main/1745576488754.jpeg" alt="Fabric" class="cert-logo">
-          </div>
-          <h3 class="text-xl font-bold text-white mb-2">Fabric Data Engineer</h3>
-          <p class="text-sm text-gray-400 mb-4">Associate Level</p>
-          <p class="text-xs text-blue-400">Microsoft • 2025</p>
-        </a>
+        <ol class="pipeline" aria-label="Ma façon de travailler, en trois étapes">
+          <li class="stage bronze">
+            <h2 data-en="1. Your need">1. Votre besoin</h2>
+            <p data-en="An AI use case to take to production, an application to extend, or data processing to make reliable.">Un cas d'usage IA à mettre en production, une application à faire évoluer, ou des traitements de données à fiabiliser.</p>
+            <ul class="files">
+              <li data-en="AI assistant on your documents">Assistant IA sur vos documents</li>
+              <li data-en="APIs and backend services">API et services backend</li>
+              <li data-en="Automated data processing">Traitements de données automatisés</li>
+            </ul>
+          </li>
+          <li class="stage silver">
+            <h2 data-en="2. My work">2. Mon travail</h2>
+            <p data-en="I scope the need with you, then develop in Python with automated tests and cloud deployment. You follow progress through regular deliveries.">Je cadre le besoin avec vous, puis je développe en Python, avec des tests automatisés et un déploiement sur le cloud. Vous suivez l'avancement par des livraisons régulières.</p>
+          </li>
+          <li class="stage gold">
+            <h2 data-en="3. What you get">3. Ce que vous obtenez</h2>
+            <p class="result" data-en="A documented solution in production that your teams can operate and extend.">Une solution en production, documentée, que vos équipes peuvent exploiter et faire évoluer.</p>
+          </li>
+        </ol>
       </div>
-    </div>
-  </section>
 
-  <!-- Projects -->
-  <section id="projects" class="relative py-24 px-6">
-    <div class="max-w-6xl mx-auto">
-      <h2 class="text-5xl font-bold mb-4 text-center gradient-text">Featured Projects</h2>
-      <p class="text-gray-400 text-center mb-16">Real-world applications of AI and data engineering</p>
-      
-      <div class="grid md:grid-cols-2 gap-8">
-        <a href="https://github.com/AMMISAIDFaical/GENAI-and-ETL-On-DPE" target="_blank" class="glass-card rounded-2xl p-8 group">
-          <div class="flex items-start justify-between mb-4">
-            <div class="p-3 rounded-lg bg-gradient-to-br from-blue-500/20 to-purple-500/20">
-              <svg class="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-              </svg>
-            </div>
-            <span class="text-xs text-gray-500 group-hover:text-blue-400 transition-colors">2024</span>
+      <section class="block" id="services">
+        <div class="block-head">
+          <div>
+            <h2 class="title" data-en="What I do">Ce que je fais</h2>
+            <p class="intro" data-en="I am a Python developer. I use it to solve AI, data and backend problems.">Je suis développeur Python. Je m'en sers pour résoudre des problèmes d'IA, de données et de backend.</p>
           </div>
-          
-          <h3 class="text-2xl font-bold text-white mb-3">GENAI & ETL on DPE</h3>
-          <p class="text-gray-400 mb-6">Advanced generative AI study on non-residential building database with comprehensive data engineering pipeline</p>
-          
-          <div class="flex flex-wrap gap-2">
-            <span class="tech-badge">Python</span>
-            <span class="tech-badge">Data Engineering</span>
-            <span class="tech-badge">GenAI</span>
-            <span class="tech-badge">ML</span>
-          </div>
-        </a>
-        
-        <a href="https://github.com/AMMISAIDFaical/smart-driving-school-terraform" target="_blank" class="glass-card rounded-2xl p-8 group">
-          <div class="flex items-start justify-between mb-4">
-            <div class="p-3 rounded-lg bg-gradient-to-br from-purple-500/20 to-pink-500/20">
-              <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
-              </svg>
-            </div>
-            <span class="text-xs text-gray-500 group-hover:text-purple-400 transition-colors">2024</span>
-          </div>
-          
-          <h3 class="text-2xl font-bold text-white mb-3">Smart Driving School IaC</h3>
-          <p class="text-gray-400 mb-6">Fully automated Azure infrastructure deployment using Terraform for scalable cloud architecture</p>
-          
-          <div class="flex flex-wrap gap-2">
-            <span class="tech-badge">Terraform</span>
-            <span class="tech-badge">Azure</span>
-            <span class="tech-badge">IaC</span>
-            <span class="tech-badge">DevOps</span>
-          </div>
-        </a>
-        
-        <a href="https://github.com/AMMISAIDFaical/ML-engineer_chrun" target="_blank" class="glass-card rounded-2xl p-8 group">
-          <div class="flex items-start justify-between mb-4">
-            <div class="p-3 rounded-lg bg-gradient-to-br from-green-500/20 to-teal-500/20">
-              <svg class="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-              </svg>
-            </div>
-            <span class="text-xs text-gray-500 group-hover:text-green-400 transition-colors">2024</span>
-          </div>
-          
-          <h3 class="text-2xl font-bold text-white mb-3">Churn Prediction Engine</h3>
-          <p class="text-gray-400 mb-6">ML-powered customer churn prediction with personalized retention recommendations and experiment tracking</p>
-          
-          <div class="flex flex-wrap gap-2">
-            <span class="tech-badge">Python</span>
-            <span class="tech-badge">ML</span>
-            <span class="tech-badge">MLflow</span>
-            <span class="tech-badge">Analytics</span>
-          </div>
-        </a>
-        
-        <a href="https://github.com/AMMISAIDFaical/smart-driving-school" target="_blank" class="glass-card rounded-2xl p-8 group">
-          <div class="flex items-start justify-between mb-4">
-            <div class="p-3 rounded-lg bg-gradient-to-br from-orange-500/20 to-red-500/20">
-              <svg class="w-8 h-8 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
-              </svg>
-            </div>
-            <span class="text-xs text-gray-500 group-hover:text-orange-400 transition-colors">2024</span>
-          </div>
-          
-          <h3 class="text-2xl font-bold text-white mb-3">AI-Powered Chatbot</h3>
-          <p class="text-gray-400 mb-6">Intelligent conversational AI assistant built with Azure AI Services and LangGraph orchestration</p>
-          
-          <div class="flex flex-wrap gap-2">
-            <span class="tech-badge">Python</span>
-            <span class="tech-badge">Azure AI</span>
-            <span class="tech-badge">LangGraph</span>
-            <span class="tech-badge">NLP</span>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
+          <ul class="rows">
+            <li>
+              <h3 data-en="AI engineering">Ingénierie IA</h3>
+              <p data-en="I build AI assistants and agents that answer from your own documents and data, and I take them all the way to production: quality checks, cost control and monitoring.">Je construis des assistants et des agents IA qui répondent à partir de vos propres documents et données, et je les amène jusqu'en production : contrôle de la qualité des réponses, maîtrise des coûts et suivi.</p>
+              <p class="tools">Python, Azure AI, LangGraph, MLflow</p>
+            </li>
+            <li>
+              <h3 data-en="Python backend development">Développement backend Python</h3>
+              <p data-en="I develop the server side of your applications in Python: APIs, business logic, databases and automated jobs, with tested code deployed to the cloud.">Je développe la partie serveur de vos applications en Python : API, logique métier, bases de données et traitements automatisés, avec du code testé et déployé dans le cloud.</p>
+              <p class="tools">Python, API REST, SQL, Azure, Terraform</p>
+            </li>
+            <li>
+              <h3 data-en="Data engineering">Ingénierie des données</h3>
+              <p data-en="I collect, clean and organise your data in Python so that your applications and AI models work from reliable, up-to-date figures.">Je collecte, nettoie et organise vos données en Python pour que vos applications et vos modèles d'IA travaillent sur des chiffres fiables et à jour.</p>
+              <p class="tools">Python, Spark, SQL, Microsoft Fabric, Databricks</p>
+            </li>
+          </ul>
+        </div>
+      </section>
 
-  <!-- Contact -->
-  <section id="contact" class="relative py-24 px-6">
-    <div class="max-w-3xl mx-auto text-center">
-      <h2 class="text-5xl font-bold mb-6 gradient-text">Let's Connect</h2>
-      <p class="text-xl text-gray-400 mb-12">Open to exciting opportunities in AI and data engineering</p>
-      
-      <div class="glass-card rounded-2xl p-12">
-        <div class="space-y-6">
-          <div class="flex items-center justify-center gap-4 text-gray-300">
-            <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-            </svg>
-            <span class="text-lg">Paris, France</span>
+      <section class="block" id="modalites">
+        <div class="block-head">
+          <div>
+            <h2 class="title" data-en="How we work together">Comment nous travaillons ensemble</h2>
+            <p class="intro" data-en="For companies, consulting firms and start-ups, on site or remotely.">Pour les entreprises, les sociétés de conseil et les start-up, sur site ou à distance.</p>
           </div>
-          
-          <div class="flex items-center justify-center gap-4">
-            <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-            </svg>
-            <a href="mailto:faical.outlook@outlook.com" class="text-lg text-blue-400 hover:text-blue-300 transition-colors">faical.outlook@outlook.com</a>
+          <ul class="rows">
+            <li>
+              <h3 data-en="Time-and-materials engagement">Mission en régie</h3>
+              <p data-en="I join your team for a period we define together and work within your tools and practices. Billing is based on days worked.">J'intègre votre équipe pour une durée définie ensemble et je travaille avec vos outils et vos pratiques. La facturation se fait au temps passé.</p>
+            </li>
+            <li>
+              <h3 data-en="Fixed-price project">Projet au forfait</h3>
+              <p data-en="We agree on the scope, the deliverables and the deadline before starting. I commit to the result.">Nous fixons le périmètre, les livrables et le délai avant de commencer. Je m'engage sur le résultat.</p>
+            </li>
+            <li>
+              <h3 data-en="Training">Formation</h3>
+              <p data-en="Sessions tailored to your teams' level and to your own use cases.">Des sessions adaptées au niveau de vos équipes et à vos propres cas d'usage.</p>
+            </li>
+            <li>
+              <h3 data-en="Sectors I know">Secteurs d'expérience</h3>
+              <p data-en="Retail, telecommunications and transportation.">Distribution, télécommunications et transports.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="block" id="certifications">
+        <div class="block-head">
+          <div>
+            <h2 class="title" data-en="Certifications">Certifications</h2>
+            <p class="intro" data-en="Each one can be checked on the issuer's website.">Chacune est vérifiable sur le site de l'organisme qui l'a délivrée.</p>
+          </div>
+          <ul class="rows">
+            <li class="cert">
+              <div>
+                <h3>Fabric Data Engineer Associate</h3>
+                <p class="who">Microsoft Certified</p>
+              </div>
+              <a class="verify" target="_blank" rel="noopener" href="https://learn.microsoft.com/api/credentials/share/fr-fr/FAICALAMMISAID-5445/DDFF47C060329D67?sharingId=1930BA0EAF32DACD" data-en="Verify this certification">Vérifier cette certification</a>
+            </li>
+            <li class="cert">
+              <div>
+                <h3>Data Engineer Associate</h3>
+                <p class="who">Databricks Certified</p>
+              </div>
+              <a class="verify" target="_blank" rel="noopener" href="https://credentials.databricks.com/904f7157-96e5-4c30-b44a-f3e4421523c6#acc.CQ20uEY6" data-en="Verify this certification">Vérifier cette certification</a>
+            </li>
+            <li class="cert">
+              <div>
+                <h3>Azure AI Engineer Associate</h3>
+                <p class="who">Microsoft Certified</p>
+              </div>
+              <a class="verify" target="_blank" rel="noopener" href="https://learn.microsoft.com/api/credentials/share/fr-fr/FAICALAMMISAID-5445/A2E27177903272D1?sharingId=1930BA0EAF32DACD" data-en="Verify this certification">Vérifier cette certification</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="block" id="projets">
+        <div class="block-head">
+          <div>
+            <h2 class="title" data-en="Projects">Projets</h2>
+            <p class="intro" data-en="The code for each project is public on GitHub.">Le code de chaque projet est public sur GitHub.</p>
+          </div>
+          <ul class="rows">
+            <li class="project">
+              <a class="name" target="_blank" rel="noopener" href="https://github.com/AMMISAIDFaical/GENAI-and-ETL-On-DPE"><h3 data-en="Generative AI and ETL on energy performance data">IA générative et ETL sur les données DPE</h3></a>
+              <p data-en="A full data pipeline and a generative AI study on the French database of energy performance certificates for non-residential buildings.">Une chaîne complète de traitement de données et une étude d'IA générative sur la base des diagnostics de performance énergétique des bâtiments non résidentiels.</p>
+              <p class="tools">Python, ETL, IA générative</p>
+            </li>
+            <li class="project">
+              <a class="name" target="_blank" rel="noopener" href="https://github.com/AMMISAIDFaical/smart-driving-school"><h3 data-en="AI assistant for a driving school">Assistant IA pour auto-école</h3></a>
+              <p data-en="A conversational assistant built with Azure AI services and orchestrated with LangGraph.">Un assistant conversationnel construit avec les services Azure AI et orchestré avec LangGraph.</p>
+              <p class="tools">Python, Azure AI, LangGraph</p>
+            </li>
+            <li class="project">
+              <a class="name" target="_blank" rel="noopener" href="https://github.com/AMMISAIDFaical/smart-driving-school-terraform"><h3 data-en="Azure infrastructure for the driving school assistant">Infrastructure Azure de l'assistant auto-école</h3></a>
+              <p data-en="The whole Azure infrastructure of the project, deployed automatically with Terraform.">Toute l'infrastructure Azure du projet, déployée automatiquement avec Terraform.</p>
+              <p class="tools">Terraform, Azure</p>
+            </li>
+            <li class="project">
+              <a class="name" target="_blank" rel="noopener" href="https://github.com/AMMISAIDFaical/ML-engineer_chrun"><h3 data-en="Customer churn prediction">Prédiction du départ des clients</h3></a>
+              <p data-en="A machine learning model that predicts which customers are likely to leave and suggests retention actions, with experiment tracking.">Un modèle de machine learning qui prédit quels clients risquent de partir et propose des actions de fidélisation, avec suivi des expérimentations.</p>
+              <p class="tools">Python, machine learning, MLflow</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="block" id="a-propos">
+        <div class="block-head">
+          <div>
+            <h2 class="title" data-en="About">À propos</h2>
+          </div>
+          <div class="about">
+            <p data-en="Python Developer specializing in AI, Data Engineering, and Backend applications, with 3 years of experience delivering solutions across the retail, telecommunications, and transportation sectors. I am also experienced in building data-driven applications, overcoming technical challenges to improve operational efficiency.">Développeur Python spécialisé en IA, en ingénierie des données et en applications backend, avec 3 ans d'expérience dans la livraison de solutions pour les secteurs de la distribution, des télécommunications et des transports. J'ai aussi l'expérience de la création d'applications pilotées par les données, en surmontant les difficultés techniques pour améliorer l'efficacité opérationnelle.</p>
+            <p data-en="I hold a Master's degree in Big Data and Artificial Intelligence from ESTIA (2025) and three certifications from Microsoft and Databricks. I work as a freelancer from L'Haÿ-les-Roses, near Paris, in French and in English.">Je suis titulaire d'un Master Big Data et Intelligence Artificielle de l'ESTIA (2025) et de trois certifications Microsoft et Databricks. Je travaille en freelance depuis L'Haÿ-les-Roses, près de Paris, en français et en anglais.</p>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <!-- Footer -->
-  <footer class="py-8 text-center text-gray-500 text-sm border-t border-white/10">
-    <p>© 2025 Faiçal AMMISAID • Designed with passion</p>
-  </footer>
+      <section class="contact" id="contact">
+        <h2 data-en="Do you have an AI, backend or data project?">Vous avez un projet IA, backend ou data ?</h2>
+        <p data-en="Tell me about your need in a few lines. I reply within two working days.">Décrivez-moi votre besoin en quelques lignes. Je vous réponds sous deux jours ouvrés.</p>
+        <a class="mail" href="mailto:faicalammisaid.consulting@gmail.com">faicalammisaid.consulting@gmail.com</a>
+        <div class="elsewhere">
+          <a target="_blank" rel="noopener" href="https://www.malt.fr/profile/faicalammisaid1">Malt</a>
+          <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/faical-ammisaid-1009761b9/">LinkedIn</a>
+          <a target="_blank" rel="noopener" href="https://github.com/AMMISAIDFaical">GitHub</a>
+        </div>
+      </section>
+    </main>
 
+    <footer>
+      <p>© 2026 Faiçal Ammi Said. <a href="mentions-legales.html" data-en="Legal notice">Mentions légales</a></p>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var langBtn = document.getElementById('lang');
+      var themeBtn = document.getElementById('theme');
+      var nodes = document.querySelectorAll('[data-en]');
+      var text = {
+        fr: { title: 'Faiçal Ammi Said, développeur Python freelance (IA, backend, data)', dark: 'Sombre', light: 'Clair',
+              toDark: 'Passer en mode sombre', toLight: 'Passer en mode clair',
+              other: 'EN', toOther: 'Switch to English', nav: 'Navigation principale' },
+        en: { title: 'Faiçal Ammi Said, freelance Python developer (AI, backend, data)', dark: 'Dark', light: 'Light',
+              toDark: 'Switch to dark mode', toLight: 'Switch to light mode',
+              other: 'FR', toOther: 'Passer en français', nav: 'Main navigation' }
+      };
+      var lang = 'fr';
+
+      function save(key, value) { try { localStorage.setItem(key, value); } catch (e) {} }
+      function load(key) { try { return localStorage.getItem(key); } catch (e) { return null; } }
+
+      /* Theme: the button names the mode you switch to. */
+      function paintThemeButton() {
+        var dark = root.getAttribute('data-theme') === 'dark';
+        themeBtn.textContent = dark ? text[lang].light : text[lang].dark;
+        themeBtn.setAttribute('aria-label', dark ? text[lang].toLight : text[lang].toDark);
+      }
+      themeBtn.addEventListener('click', function () {
+        var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        save('theme', next);
+        paintThemeButton();
+      });
+      /* Follow the system setting until the visitor chooses a theme. */
+      if (window.matchMedia) {
+        var mq = window.matchMedia('(prefers-color-scheme: dark)');
+        var follow = function (e) {
+          if (load('theme')) { return; }
+          root.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+          paintThemeButton();
+        };
+        if (mq.addEventListener) { mq.addEventListener('change', follow); }
+      }
+
+      /* Language: French is in the HTML, English is in data-en. */
+      nodes.forEach(function (n) { n.setAttribute('data-fr', n.innerHTML); });
+      function showLang(next) {
+        lang = next;
+        nodes.forEach(function (n) { n.innerHTML = n.getAttribute('data-' + lang); });
+        root.lang = lang;
+        document.title = text[lang].title;
+        langBtn.textContent = text[lang].other;
+        langBtn.setAttribute('aria-label', text[lang].toOther);
+        document.getElementById('nav').setAttribute('aria-label', text[lang].nav);
+        paintThemeButton();
+        save('lang', lang);
+      }
+      langBtn.addEventListener('click', function () { showLang(lang === 'fr' ? 'en' : 'fr'); });
+      if (load('lang') === 'en') { showLang('en'); } else { paintThemeButton(); }
+
+      /* Header: show a line once the page is scrolled, and mark the current section. */
+      var header = document.getElementById('header');
+      window.addEventListener('scroll', function () {
+        header.classList.toggle('scrolled', window.scrollY > 8);
+      }, { passive: true });
+
+      if ('IntersectionObserver' in window) {
+        var links = {};
+        document.querySelectorAll('#nav a').forEach(function (a) { links[a.getAttribute('href').slice(1)] = a; });
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) { return; }
+            Object.keys(links).forEach(function (id) { links[id].removeAttribute('aria-current'); });
+            if (links[entry.target.id]) { links[entry.target.id].setAttribute('aria-current', 'true'); }
+          });
+        }, { rootMargin: '-30% 0px -60% 0px' });
+        Object.keys(links).forEach(function (id) {
+          var section = document.getElementById(id);
+          if (section) { observer.observe(section); }
+        });
+      }
+    })();
+  </script>
 </body>
 </html>
