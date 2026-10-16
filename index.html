@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Faiçal Ammi Said, développeur Python freelance (IA, backend, data)</title>
-  <meta name="description" content="Développeur Python freelance en Île-de-France. Assistants et agents IA, développement backend, ingénierie des données, formation.">
-  <meta property="og:title" content="Faiçal Ammi Said, développeur Python freelance (IA, backend, data)">
-  <meta property="og:description" content="Assistants et agents IA, développement backend, ingénierie des données, formation.">
+  <title>Faiçal Ammi Said, AI engineer freelance (Python, Azure)</title>
+  <meta name="description" content="AI engineer freelance en Île-de-France. Je conçois des assistants et des agents IA et je les mets en production sur Azure. Disponible dès maintenant.">
+  <meta property="og:title" content="Faiçal Ammi Said, AI engineer freelance (Python, Azure)">
+  <meta property="og:description" content="Assistants et agents IA mis en production sur Azure, avec le backend et les données qui les alimentent. Disponible dès maintenant.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ammisaidfaical.github.io/faicalportfolio/">
   <link rel="canonical" href="https://ammisaidfaical.github.io/faicalportfolio/">
@@ -28,7 +28,7 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Faiçal Ammi Said",
-    "jobTitle": "Développeur Python freelance (IA, backend, data)",
+    "jobTitle": "AI engineer freelance (Python, Azure)",
     "url": "https://ammisaidfaical.github.io/faicalportfolio/",
     "email": "mailto:faicalammisaid.consulting@gmail.com",
     "address": { "@type": "PostalAddress", "addressLocality": "L'Haÿ-les-Roses", "addressCountry": "FR" },
@@ -57,7 +57,7 @@
       --gold-wash: #FBF4DC;
       --display: "Bricolage Grotesque", "Segoe UI", sans-serif;
       --body: "IBM Plex Sans", "Segoe UI", sans-serif;
-          }
+    }
     :root { color-scheme: light; }
     :root[data-theme="dark"] {
       color-scheme: dark;
@@ -147,7 +147,15 @@
       line-height: 1.02; letter-spacing: -0.035em; margin: 0 0 24px;
       text-wrap: balance;
     }
-    .hero p.lead { font-size: 1.2rem; color: var(--muted); max-width: 34em; margin: 0 0 32px; }
+    .hero p.lead { font-size: 1.2rem; color: var(--muted); max-width: 34em; margin: 0 0 20px; }
+    .avail {
+      display: inline-flex; align-items: center; gap: 10px; margin: 0 0 28px;
+      font-size: 0.95rem; font-weight: 600;
+    }
+    .avail::before {
+      content: ""; width: 10px; height: 10px; border-radius: 50%;
+      background: var(--gold); box-shadow: 0 0 0 4px var(--gold-wash);
+    }
     .actions { display: flex; flex-wrap: wrap; gap: 14px; }
     .btn {
       display: inline-block; text-decoration: none; font-weight: 600;
@@ -218,6 +226,14 @@
     .rows p { margin: 0; color: var(--muted); max-width: 40em; }
     .tools { margin-top: 10px !important; font-size: 0.92rem; color: var(--ink) !important; }
 
+    /* Clients */
+    .clients { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .clients li { border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; }
+    .clients .name { font-family: var(--display); font-weight: 600; font-size: 1.2rem; letter-spacing: -0.015em; margin: 0 0 4px; }
+    .clients .sector { color: var(--muted); font-size: 0.92rem; margin: 0 0 8px; }
+    .clients .role { margin: 0; font-size: 0.98rem; }
+    @media (max-width: 560px) { .clients { grid-template-columns: 1fr; } }
+
     .cert { display: flex; justify-content: space-between; align-items: baseline; gap: 20px; flex-wrap: wrap; }
     .cert .who { color: var(--muted); font-size: 0.95rem; }
     .verify {
@@ -228,6 +244,8 @@
 
     .project a.name { text-decoration: none; }
     .project a.name:hover h3 { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 5px; }
+    .project .links { margin-top: 8px !important; display: flex; gap: 18px; flex-wrap: wrap; }
+    .project .links a { font-weight: 600; font-size: 0.95rem; }
 
     /* Contact */
     .contact { padding: 96px 0; border-top: 1px solid var(--line); }
@@ -273,6 +291,7 @@
       <a class="brand" href="#top">Faiçal Ammi Said</a>
       <nav aria-label="Navigation principale" id="nav">
         <a href="#services" data-en="Services">Services</a>
+        <a href="#clients" data-en="Clients">Clients</a>
         <a href="#certifications" data-en="Certifications">Certifications</a>
         <a href="#projets" data-en="Projects">Projets</a>
         <a href="#a-propos" data-en="About">À propos</a>
@@ -287,8 +306,9 @@
     <main id="top" tabindex="-1">
       <div class="hero">
         <div>
-          <h1 data-en="I solve your AI, backend and data problems with Python.">Je résous vos problèmes d'IA, de backend et de données avec Python.</h1>
-          <p class="lead" data-en="Freelance Python developer based near Paris. I build AI assistants, develop the server side of your applications and make the data they rely on dependable.">Développeur Python freelance en Île-de-France. Je conçois des assistants IA, je développe la partie serveur de vos applications et je fiabilise les données dont elles ont besoin.</p>
+          <h1 data-en="Freelance AI engineer. I take your AI assistants and agents to production.">AI engineer freelance. Je mets vos assistants et agents IA en production.</h1>
+          <p class="lead" data-en="Python developer near Paris. I design the assistant, build the backend and data pipelines that feed it, and deploy the whole thing on Azure so your teams can run it without me.">Développeur Python en Île-de-France. Je conçois l'assistant, je construis le backend et les traitements de données qui l'alimentent, et je déploie l'ensemble sur Azure pour que vos équipes puissent l'exploiter sans moi.</p>
+          <p class="avail" data-en="Available now, full time, on site in Île-de-France or remote across France.">Disponible dès maintenant, à temps plein, sur site en Île-de-France ou à distance partout en France.</p>
           <div class="actions">
             <a class="btn primary" href="#contact" data-en="Discuss a project">Parler d'une mission</a>
             <a class="btn ghost" target="_blank" rel="noopener" href="https://www.malt.fr/profile/faicalammisaid1" data-en="Hire me on Malt">Me recruter sur Malt</a>
@@ -298,20 +318,20 @@
         <ol class="pipeline" aria-label="Ma façon de travailler, en trois étapes">
           <li class="stage bronze">
             <h2 data-en="1. Your need">1. Votre besoin</h2>
-            <p data-en="An AI use case to take to production, an application to extend, or data processing to make reliable.">Un cas d'usage IA à mettre en production, une application à faire évoluer, ou des traitements de données à fiabiliser.</p>
+            <p data-en="An AI use case to take to production: an assistant on your documents, an agent that handles support, automated processing that must be reliable.">Un cas d'usage IA à mettre en production : un assistant sur vos documents, un agent qui traite le support, des traitements automatisés qui doivent être fiables.</p>
             <ul class="files">
               <li data-en="AI assistant on your documents">Assistant IA sur vos documents</li>
-              <li data-en="APIs and backend services">API et services backend</li>
-              <li data-en="Automated data processing">Traitements de données automatisés</li>
+              <li data-en="Support agents">Agents de support</li>
+              <li data-en="Automated processing">Traitements automatisés</li>
             </ul>
           </li>
           <li class="stage silver">
             <h2 data-en="2. My work">2. Mon travail</h2>
-            <p data-en="I scope the need with you, then develop in Python with automated tests and cloud deployment. You follow progress through regular deliveries.">Je cadre le besoin avec vous, puis je développe en Python, avec des tests automatisés et un déploiement sur le cloud. Vous suivez l'avancement par des livraisons régulières.</p>
+            <p data-en="I scope the use case with you, build the assistant with LangGraph and Azure AI, measure the quality of its answers, then deploy it with automated tests and infrastructure as code. You see a working version every week.">Je cadre le cas d'usage avec vous, je construis l'assistant avec LangGraph et Azure AI, je mesure la qualité de ses réponses, puis je le déploie avec des tests automatisés et une infrastructure en code. Vous voyez une version qui fonctionne chaque semaine.</p>
           </li>
           <li class="stage gold">
             <h2 data-en="3. What you get">3. Ce que vous obtenez</h2>
-            <p class="result" data-en="A documented solution in production that your teams can operate and extend.">Une solution en production, documentée, que vos équipes peuvent exploiter et faire évoluer.</p>
+            <p class="result" data-en="An assistant in production on Azure, with measured answer quality, controlled costs and documentation your teams can build on.">Un assistant en production sur Azure, avec une qualité de réponse mesurée, des coûts maîtrisés et une documentation sur laquelle vos équipes peuvent s'appuyer.</p>
           </li>
         </ol>
       </div>
@@ -320,23 +340,54 @@
         <div class="block-head">
           <div>
             <h2 class="title" data-en="What I do">Ce que je fais</h2>
-            <p class="intro" data-en="I am a Python developer. I use it to solve AI, data and backend problems.">Je suis développeur Python. Je m'en sers pour résoudre des problèmes d'IA, de données et de backend.</p>
+            <p class="intro" data-en="AI engineering is the core. Backend and data work exist to make the assistant reliable.">L'ingénierie IA est le cœur. Le backend et la data servent à rendre l'assistant fiable.</p>
           </div>
           <ul class="rows">
             <li>
               <h3 data-en="AI engineering">Ingénierie IA</h3>
-              <p data-en="I build AI assistants and agents that answer from your own documents and data, and I take them all the way to production: quality checks, cost control and monitoring.">Je construis des assistants et des agents IA qui répondent à partir de vos propres documents et données, et je les amène jusqu'en production : contrôle de la qualité des réponses, maîtrise des coûts et suivi.</p>
-              <p class="tools">Python, Azure AI, LangGraph, MLflow</p>
+              <p data-en="Assistants and agents that answer from your own documents and data, with semantic search, tool calling to your internal APIs and automated evaluation of answer quality before and after each release.">Des assistants et des agents qui répondent à partir de vos propres documents et données, avec recherche sémantique, appel de vos API internes et évaluation automatisée de la qualité des réponses avant et après chaque livraison.</p>
+              <p class="tools">Python, Azure OpenAI, Azure AI Search, LangGraph, RAGAS, MLflow</p>
             </li>
             <li>
-              <h3 data-en="Python backend development">Développement backend Python</h3>
-              <p data-en="I develop the server side of your applications in Python: APIs, business logic, databases and automated jobs, with tested code deployed to the cloud.">Je développe la partie serveur de vos applications en Python : API, logique métier, bases de données et traitements automatisés, avec du code testé et déployé dans le cloud.</p>
-              <p class="tools">Python, API REST, SQL, Azure, Terraform</p>
+              <h3 data-en="Python backend">Backend Python</h3>
+              <p data-en="REST APIs, business logic and automated jobs, with tests, CI/CD and Azure infrastructure written as code, so the assistant plugs into your applications and can be redeployed in minutes.">API REST, logique métier et traitements automatisés, avec tests, CI/CD et infrastructure Azure écrite en code, pour que l'assistant s'intègre à vos applications et puisse être redéployé en quelques minutes.</p>
+              <p class="tools">Python, FastAPI, SQL, Docker, Terraform, Azure DevOps, GitHub Actions</p>
             </li>
             <li>
               <h3 data-en="Data engineering">Ingénierie des données</h3>
-              <p data-en="I collect, clean and organise your data in Python so that your applications and AI models work from reliable, up-to-date figures.">Je collecte, nettoie et organise vos données en Python pour que vos applications et vos modèles d'IA travaillent sur des chiffres fiables et à jour.</p>
+              <p data-en="Pipelines that collect, clean and refresh your sources so the assistant works from reliable, up-to-date information.">Des pipelines qui collectent, nettoient et rafraîchissent vos sources pour que l'assistant travaille sur des informations fiables et à jour.</p>
               <p class="tools">Python, Spark, SQL, Microsoft Fabric, Databricks</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="block" id="clients">
+        <div class="block-head">
+          <div>
+            <h2 class="title" data-en="Clients">Clients</h2>
+            <p class="intro" data-en="Three years of assignments in retail, transportation, telecommunications and software. References available on request.">Trois ans de missions dans la distribution, les transports, les télécommunications et l'édition logicielle. Références disponibles sur demande.</p>
+          </div>
+          <ul class="clients">
+            <li>
+              <p class="name">Rexel</p>
+              <p class="sector" data-en="Retail · 2024–2025">Distribution · 2024–2025</p>
+              <p class="role" data-en="Multi-agent support assistant taken to production. 40% fewer tickets, 50% fewer manual validations.">Assistant support multi-agents mis en production. 40 % de tickets en moins, 50 % de validations manuelles en moins.</p>
+            </li>
+            <li>
+              <p class="name">HUPI</p>
+              <p class="sector" data-en="Transportation · 2023–2024">Transports · 2023–2024</p>
+              <p class="role" data-en="Passenger-count forecasting models deployed per line, 85% average accuracy.">Modèles de prévision du nombre de passagers déployés par ligne, précision moyenne de 85 %.</p>
+            </li>
+            <li>
+              <p class="name">ATM Mobilis</p>
+              <p class="sector" data-en="Telecommunications · 2022–2023">Télécommunications · 2022–2023</p>
+              <p class="role" data-en="Spark ETL pipelines on customer data, migrated to Azure.">Pipelines ETL Spark sur les données clients, migrées sur Azure.</p>
+            </li>
+            <li>
+              <p class="name">Axone Data</p>
+              <p class="sector" data-en="Software · 2026">Édition logicielle · 2026</p>
+              <p class="role" data-en="Python REST APIs, CRM data pipeline and GitLab CI/CD.">API REST en Python, pipeline de données CRM et CI/CD GitLab.</p>
             </li>
           </ul>
         </div>
@@ -346,7 +397,7 @@
         <div class="block-head">
           <div>
             <h2 class="title" data-en="How we work together">Comment nous travaillons ensemble</h2>
-            <p class="intro" data-en="For companies, consulting firms and start-ups, on site or remotely.">Pour les entreprises, les sociétés de conseil et les start-up, sur site ou à distance.</p>
+            <p class="intro" data-en="For companies, consulting firms and start-ups, on site or remotely. Daily rate: €300 to €350 excl. VAT, depending on the length and context of the assignment.">Pour les entreprises, les sociétés de conseil et les start-up, sur site ou à distance. TJM : 300 à 350 € HT, selon la durée et le contexte de la mission.</p>
           </div>
           <ul class="rows">
             <li>
@@ -355,15 +406,11 @@
             </li>
             <li>
               <h3 data-en="Fixed-price project">Projet au forfait</h3>
-              <p data-en="We agree on the scope, the deliverables and the deadline before starting. I commit to the result.">Nous fixons le périmètre, les livrables et le délai avant de commencer. Je m'engage sur le résultat.</p>
+              <p data-en="We agree on the scope, the deliverables and the deadline before starting, and the price does not move.">Nous fixons le périmètre, les livrables et le délai avant de commencer, et le prix ne bouge pas.</p>
             </li>
             <li>
               <h3 data-en="Training">Formation</h3>
-              <p data-en="Sessions tailored to your teams' level and to your own use cases.">Des sessions adaptées au niveau de vos équipes et à vos propres cas d'usage.</p>
-            </li>
-            <li>
-              <h3 data-en="Sectors I know">Secteurs d'expérience</h3>
-              <p data-en="Retail, telecommunications and transportation.">Distribution, télécommunications et transports.</p>
+              <p data-en="Hands-on sessions on building and operating AI assistants, using your own documents and use cases.">Des sessions pratiques sur la construction et l'exploitation d'assistants IA, à partir de vos propres documents et cas d'usage.</p>
             </li>
           </ul>
         </div>
@@ -378,6 +425,13 @@
           <ul class="rows">
             <li class="cert">
               <div>
+                <h3>Azure AI Engineer Associate</h3>
+                <p class="who">Microsoft Certified</p>
+              </div>
+              <a class="verify" target="_blank" rel="noopener" href="https://learn.microsoft.com/api/credentials/share/fr-fr/FAICALAMMISAID-5445/A2E27177903272D1?sharingId=1930BA0EAF32DACD" data-en="Verify this certification">Vérifier cette certification</a>
+            </li>
+            <li class="cert">
+              <div>
                 <h3>Fabric Data Engineer Associate</h3>
                 <p class="who">Microsoft Certified</p>
               </div>
@@ -389,13 +443,6 @@
                 <p class="who">Databricks Certified</p>
               </div>
               <a class="verify" target="_blank" rel="noopener" href="https://credentials.databricks.com/904f7157-96e5-4c30-b44a-f3e4421523c6#acc.CQ20uEY6" data-en="Verify this certification">Vérifier cette certification</a>
-            </li>
-            <li class="cert">
-              <div>
-                <h3>Azure AI Engineer Associate</h3>
-                <p class="who">Microsoft Certified</p>
-              </div>
-              <a class="verify" target="_blank" rel="noopener" href="https://learn.microsoft.com/api/credentials/share/fr-fr/FAICALAMMISAID-5445/A2E27177903272D1?sharingId=1930BA0EAF32DACD" data-en="Verify this certification">Vérifier cette certification</a>
             </li>
           </ul>
         </div>
@@ -409,22 +456,21 @@
           </div>
           <ul class="rows">
             <li class="project">
+              <a class="name" target="_blank" rel="noopener" href="https://github.com/AMMISAIDFaical/smart-driving-school"><h3 data-en="AI assistant for driving schools, from code to Azure infrastructure">Assistant IA pour auto-écoles, du code à l'infrastructure Azure</h3></a>
+              <p data-en="Built during a Microsoft hackathon in 2025: driving-school documents indexed with Azure AI Search, a LangGraph application with three specialised agents, and the whole Azure infrastructure deployed with Terraform.">Réalisé lors d'un hackathon Microsoft en 2025 : documents d'auto-école indexés avec Azure AI Search, une application LangGraph à trois agents spécialisés, et toute l'infrastructure Azure déployée avec Terraform.</p>
+              <p class="links">
+                <a target="_blank" rel="noopener" href="https://github.com/AMMISAIDFaical/smart-driving-school" data-en="Assistant code">Code de l'assistant</a>
+                <a target="_blank" rel="noopener" href="https://github.com/AMMISAIDFaical/smart-driving-school-terraform" data-en="Terraform infrastructure">Infrastructure Terraform</a>
+              </p>
+              <p class="tools">Python, Azure OpenAI, Azure AI Search, LangGraph, Terraform, Docker</p>
+            </li>
+            <li class="project">
               <a class="name" target="_blank" rel="noopener" href="https://github.com/AMMISAIDFaical/GENAI-and-ETL-On-DPE"><h3 data-en="Generative AI and ETL on energy performance data">IA générative et ETL sur les données DPE</h3></a>
               <p data-en="A full data pipeline and a generative AI study on the French database of energy performance certificates for non-residential buildings.">Une chaîne complète de traitement de données et une étude d'IA générative sur la base des diagnostics de performance énergétique des bâtiments non résidentiels.</p>
               <p class="tools">Python, ETL, IA générative</p>
             </li>
             <li class="project">
-              <a class="name" target="_blank" rel="noopener" href="https://github.com/AMMISAIDFaical/smart-driving-school"><h3 data-en="AI assistant for a driving school">Assistant IA pour auto-école</h3></a>
-              <p data-en="A conversational assistant built with Azure AI services and orchestrated with LangGraph.">Un assistant conversationnel construit avec les services Azure AI et orchestré avec LangGraph.</p>
-              <p class="tools">Python, Azure AI, LangGraph</p>
-            </li>
-            <li class="project">
-              <a class="name" target="_blank" rel="noopener" href="https://github.com/AMMISAIDFaical/smart-driving-school-terraform"><h3 data-en="Azure infrastructure for the driving school assistant">Infrastructure Azure de l'assistant auto-école</h3></a>
-              <p data-en="The whole Azure infrastructure of the project, deployed automatically with Terraform.">Toute l'infrastructure Azure du projet, déployée automatiquement avec Terraform.</p>
-              <p class="tools">Terraform, Azure</p>
-            </li>
-            <li class="project">
-              <a class="name" target="_blank" rel="noopener" href="https://github.com/AMMISAIDFaical/ML-engineer_chrun"><h3 data-en="Customer churn prediction">Prédiction du départ des clients</h3></a>
+              <a class="name" target="_blank" rel="noopener" href="https://github.com/AMMISAIDFaical/ML-engineer_churn"><h3 data-en="Customer churn prediction">Prédiction du départ des clients</h3></a>
               <p data-en="A machine learning model that predicts which customers are likely to leave and suggests retention actions, with experiment tracking.">Un modèle de machine learning qui prédit quels clients risquent de partir et propose des actions de fidélisation, avec suivi des expérimentations.</p>
               <p class="tools">Python, machine learning, MLflow</p>
             </li>
@@ -438,15 +484,15 @@
             <h2 class="title" data-en="About">À propos</h2>
           </div>
           <div class="about">
-            <p data-en="Python Developer specializing in AI, Data Engineering, and Backend applications, with 3 years of experience delivering solutions across the retail, telecommunications, and transportation sectors. I am also experienced in building data-driven applications, overcoming technical challenges to improve operational efficiency.">Développeur Python spécialisé en IA, en ingénierie des données et en applications backend, avec 3 ans d'expérience dans la livraison de solutions pour les secteurs de la distribution, des télécommunications et des transports. J'ai aussi l'expérience de la création d'applications pilotées par les données, en surmontant les difficultés techniques pour améliorer l'efficacité opérationnelle.</p>
-            <p data-en="I hold a Master's degree in Big Data and Artificial Intelligence from ESTIA (2025) and three certifications from Microsoft and Databricks. I work as a freelancer from L'Haÿ-les-Roses, near Paris, in French and in English.">Je suis titulaire d'un Master Big Data et Intelligence Artificielle de l'ESTIA (2025) et de trois certifications Microsoft et Databricks. Je travaille en freelance depuis L'Haÿ-les-Roses, près de Paris, en français et en anglais.</p>
+            <p data-en="AI engineer and Python developer with 3 years of experience delivering AI, data and backend solutions for Rexel, HUPI, ATM Mobilis and Axone Data, in retail, transportation, telecommunications and software.">AI engineer et développeur Python, avec 3 ans d'expérience dans la livraison de solutions IA, data et backend pour Rexel, HUPI, ATM Mobilis et Axone Data, dans la distribution, les transports, les télécommunications et l'édition logicielle.</p>
+            <p data-en="I hold a Master's degree in Big Data and Artificial Intelligence from ESTIA (2025) and three certifications from Microsoft and Databricks. I work as a freelancer from L'Haÿ-les-Roses, near Paris, in French and in English, and I am available now.">Je suis titulaire d'un Master Big Data et Intelligence Artificielle de l'ESTIA (2025) et de trois certifications Microsoft et Databricks. Je travaille en freelance depuis L'Haÿ-les-Roses, près de Paris, en français et en anglais, et je suis disponible dès maintenant.</p>
           </div>
         </div>
       </section>
 
       <section class="contact" id="contact">
-        <h2 data-en="Do you have an AI, backend or data project?">Vous avez un projet IA, backend ou data ?</h2>
-        <p data-en="Tell me about your need in a few lines. I reply within two working days.">Décrivez-moi votre besoin en quelques lignes. Je vous réponds sous deux jours ouvrés.</p>
+        <h2 data-en="Do you have an AI project to take to production?">Vous avez un projet IA à mettre en production ?</h2>
+        <p data-en="Tell me about your need in a few lines. I reply within 24 hours and can start right away.">Décrivez-moi votre besoin en quelques lignes. Je vous réponds sous 24 h et je peux démarrer tout de suite.</p>
         <a class="mail" href="mailto:faicalammisaid.consulting@gmail.com">faicalammisaid.consulting@gmail.com</a>
         <div class="elsewhere">
           <a target="_blank" rel="noopener" href="https://www.malt.fr/profile/faicalammisaid1">Malt</a>
@@ -468,10 +514,10 @@
       var themeBtn = document.getElementById('theme');
       var nodes = document.querySelectorAll('[data-en]');
       var text = {
-        fr: { title: 'Faiçal Ammi Said, développeur Python freelance (IA, backend, data)', dark: 'Sombre', light: 'Clair',
+        fr: { title: 'Faiçal Ammi Said, AI engineer freelance (Python, Azure)', dark: 'Sombre', light: 'Clair',
               toDark: 'Passer en mode sombre', toLight: 'Passer en mode clair',
               other: 'EN', toOther: 'Switch to English', nav: 'Navigation principale' },
-        en: { title: 'Faiçal Ammi Said, freelance Python developer (AI, backend, data)', dark: 'Dark', light: 'Light',
+        en: { title: 'Faiçal Ammi Said, freelance AI engineer (Python, Azure)', dark: 'Dark', light: 'Light',
               toDark: 'Switch to dark mode', toLight: 'Switch to light mode',
               other: 'FR', toOther: 'Passer en français', nav: 'Main navigation' }
       };
